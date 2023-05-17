@@ -1,0 +1,947 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.contenedor__grid{
+    width: 100%;
+    /*! este valor es variable, cuando creas una nueva categoria hay que modificarlo*/
+    height: 7000px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    background-color: black;
+}
+
+
+/* ! IZQUIERDA */
+.grid__izquierda{
+    width: 100%;
+    height: 100%;
+    border-right: 2px solid rgba(250, 250, 250, 0.815);
+    background-image: url("bt-1-black.jpg");
+    background-repeat: repeat-y;
+    background-position: center;
+    cursor: pointer;
+    animation-name: izquierda;
+    animation-duration: 110s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes izquierda {
+    
+ 0%{
+    background-position: center;
+ }
+
+ 
+ 10%{
+    background-position: bottom;
+ }
+ 
+
+ 
+ 20%{
+    background-position: center;
+ }
+
+ 
+ 30%{
+    background-position: bottom;
+ }
+
+
+ 
+ 40%{
+    background-position: center;
+ }
+
+
+
+ 50%{
+    background-position: bottom;
+ }
+
+
+ 
+ 60%{
+    background-position: center;
+ }
+
+ 
+ 70%{
+    background-position: bottom;
+ }
+
+ 
+ 80%{
+    background-position: center;
+ }
+
+ 
+ 90%{
+    background-position: bottom;
+ }
+
+ 
+ 100%{
+    background-position: center;
+ }
+
+
+
+}
+
+
+
+.izquierda__text-cont{
+  transform: rotate(90deg);
+}
+
+.text-cont__h3{
+    color: rgba(255, 253, 253, 0.445);
+    font-size: 60px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    padding: 100px 0;
+    text-transform: uppercase;
+    letter-spacing: 35px;
+    transition: 900ms ease-in-out;
+}
+
+.text-cont__h3:hover{
+    color: rgba(255, 255, 255, 0.644);
+    cursor: pointer;
+}
+
+
+
+/* ! DERECHA */
+.grid__derecha{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    grid-auto-rows: 400px;
+    row-gap: 100px;
+    background-color: black;
+}
+
+
+
+
+/* parte 3 */
+
+.derecha__parte3{
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+   
+}
+
+
+/* parte 2 */
+
+.derecha__parte2{
+ margin: 40px auto;
+}
+
+
+/* parte 1 Card */
+
+.derecha__parte1-card{
+    margin: 0 auto;
+    width: 450px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: 900ms ease-out;
+    position: relative;
+    border-radius: 30px;
+    border: 1px solid rgb(248, 236, 204);
+}
+
+.derecha__parte1-card:hover{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+
+.card__frente, 
+.card__atras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+    border-radius: 30px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.card__atras{
+    transform: rotateY(180deg);
+ 
+}
+
+/* ! CARD ADELANTE GENERAL */
+.img__text-h4{
+    text-align: center;
+    color: rgba(252, 252, 252, 0.397);
+    font-size: 45px;
+    letter-spacing: 30px;
+    background-color: rgba(0, 0, 0, 0.534);
+    text-transform: uppercase;
+    padding: 0 200px;
+    
+}
+
+/* ! CARD ATRAS GENERAL */
+.card-atras__img{
+    background-color: rgba(0, 0, 0, 0.685);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img__a{
+    width: 200px;
+    height: 45px;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 10px;
+    font-weight: 900;
+    font-family: lato;
+    background: linear-gradient(to right, #1f1c2c, #928dab);
+    border: none;
+    border-radius: 30px;
+    
+}
+
+
+
+/* ! CARD 1 FRENTE - SPACE*/
+.card-1{
+    background-image: url("../category/space/space-5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+
+/* ! CARD 2 FRENTE - ANIMALES */
+.card-2{
+    background-image: url("../category/animal/animal-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* ! CARD 3 FRENTE - ARTE*/
+.card-3{
+    background-image: url("/category/art/art-5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* ! CARD 4 FRENTE - CAT*/
+.card-4{
+    background-image: url("/category/cat/cat-36.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+
+/* ! CARD 5 FRENTE - DOG*/
+.card-5{
+    background-image: url("/category/dog/dog-45.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+
+
+/* ! CARD 6 FRENTE - GAMES*/
+.card-6{
+    background-image: url("/category/games/game-3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+
+/* ! CARD 7 FRENTE LEAVES*/
+.card-7{
+    background-image: url("/category/leaves/leaves-25.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* ! CARD 8 FRENTE - NATURE*/
+.card-8{
+    background-image: url("/category/nature/nature-95.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* ! CARD 9 FRENTE - TREE*/
+.card-9{
+    background-image: url("/category/trees/tree-3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* ! CARD 10 FRENTE - WOMAN*/
+.card-10{
+    background-image: url("/category/woman/woman-124.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* ! CARD 11 FRENTE - ROBOT*/
+.card-11{
+    background-image: url("/category/robot/robot-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* ! CARD 12 FRENTE - WARRIOR*/
+.card-12{
+    background-image: url("/category/warrior/warrior-3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* ! CARD 13 FRENTE - TATUAJE*/
+.card-13{
+    background-image: url("/category/tatuajes/tatuaje-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+
+
+/* ! CARD 14 FRENTE -- FOOD*/
+.card-14{
+    background-image: url("/category/food/food-50.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* ! CARD 15 FRENTE -- CARDS*/
+.card-15{
+    background-image: url("/category/cars/cars-19.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+/* ! CARD 16 FRENTE -- ROUTE*/
+.card-16{
+    background-image: url("/category/routee/route-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+
+/* ! CARD 17 FRENTE -- HOME*/
+.card-17{
+    background-image: url("/category/home/home-60.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* ! CARD 18 FRENTE -- MOUNTAIN*/
+.card-18{
+    background-image: url("/category/mountain/mountain-6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* ! CARD 19 FRENTE -- PEOPLES*/
+.card-19{
+    background-image: url("/category/peoples/people-18.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+
+/* ! CARD 20 FRENTE -- SNOW*/
+.card-20{
+    background-image: url("/category/snow/snow-4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* ! CARD 21 FRENTE -- MOON*/
+.card-21{
+    background-image: url("/category/moon/moon-27.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* !CARD 22 FRENTE -- ANIME */
+.card-22{
+    background-image: url("/category/animee/anime-65.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+} 
+
+
+/* ! CARD 23 FRENTE -- LOGO*/
+.card-23{
+    background-image: url("/category/logo/log-17.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* 
+ CARD 24 FRENTE -- ARQUITETUTA
+
+.card-24{
+    background-image: url("/category/arquitecture/arquitecture-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+} */
+
+
+
+/* ! CARD 25 FRENTE -- BITCOIN*/
+.card-25{
+    background-image: url("/category/cripto/cripto-11.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+
+/* ! CARD 26 FRENTE -- FOREST*/
+.card-26{
+    background-image: url("/category/forest/forest-12.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+                      
+@media screen and (max-width: 1240px){
+ 
+.contenedor__grid{
+     width: 100%;
+     /* height: 2350vh; */
+     display: grid;
+     max-width: 1238px;
+     grid-template-columns: 200px auto;
+     background-color: black;
+}
+    
+.grid__izquierda{
+    animation-duration: 200s;
+}
+
+
+/* ! DERECHA */
+.grid__derecha{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px;
+    grid-auto-rows: 500px;
+    row-gap: 100px;
+    background-color: black;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+}
+
+}
+
+
+
+                        
+@media screen and (max-width: 920px){
+
+
+  
+.contenedor__grid{
+        width: 100%;
+        height: auto;
+        display: grid;
+        max-width: 1238px;
+        grid-template-columns: 160px auto;
+        background-color: black;
+}
+    
+
+
+/* parte 1 Card */
+
+.derecha__parte1-card{
+    width: 420px;
+    height: 400px;
+}
+
+/* !izquierda txt */
+.text-cont__h3{
+    font-size: 45px;
+}
+
+
+}
+ 
+
+
+             
+@media screen and (max-width: 750px){
+    
+    /* parte 1 Card */
+    
+.derecha__parte1-card{
+        width: 400px;
+        height: 400px;
+}
+
+/* !card text */
+.img__text-h4{  
+    font-size: 40px;
+    letter-spacing: 24px;
+    text-transform: uppercase;
+    padding: 0 200px;
+}
+    
+}
+
+
+
+             
+@media screen and (max-width: 725px){
+    
+
+.contenedor__grid{
+        width: 100%;
+        display: grid;
+        max-width: 1238px;
+        grid-template-columns: 140px auto;
+        background-color: black;
+}
+
+/* ! izquierda txt */
+.text-cont__h3{
+    font-size: 40px;
+}
+
+}
+
+             
+@media screen and (max-width: 670px){
+    
+    /* parte 1 Card */
+    
+.derecha__parte1-card{
+        width: 380px;
+        height: 400px;
+}
+
+/* !card text */
+.img__text-h4{  
+    font-size: 35px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    padding: 0 200px;
+}
+    
+    
+}
+         
+@media screen and (max-width: 625px){
+    
+    /* parte 1 Card */
+    
+.derecha__parte1-card{
+        width: 360px;
+        height: 400px;
+}
+
+
+/* ! izquierda txt */
+.text-cont__h3{
+    font-size: 30px;
+}
+
+    
+
+}
+
+
+
+@media screen and (max-width: 580px){
+    
+    /* parte 1 Card */
+    
+.derecha__parte1-card{
+        width: 350px;
+        height: 400px;
+}
+
+
+.contenedor__grid{
+    width: 100%;
+
+    display: grid;
+    max-width: 1238px;
+    grid-template-columns: 130px auto;
+    background-color: black;
+}
+
+}
+
+
+@media screen and (max-width: 550px){
+
+     /* parte 1 Card */
+    
+.derecha__parte1-card{
+    width: 340px;
+    height: 400px;
+}
+
+
+.contenedor__grid{
+width: 100%;
+display: grid;
+max-width: 1238px;
+grid-template-columns: 120px auto;
+background-color: black;
+}
+
+}
+
+@media screen and (max-width: 520px){
+
+    /* parte 1 Card */
+   
+.derecha__parte1-card{
+   width: 330px;
+   height: 400px;
+}
+
+
+.contenedor__grid{
+width: 100%;
+display: grid;
+max-width: 1238px;
+grid-template-columns: 100px auto;
+background-color: black;
+}
+
+
+/* ! izquierda txt */
+.text-cont__h3{
+    font-size: 21px;
+}
+
+
+
+/* !card text */
+.img__text-h4{  
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    padding: 0 200px;
+}
+
+}
+
+@media screen and (max-width: 490px){
+
+    /* parte 1 Card */
+   
+.derecha__parte1-card{
+   width: 320px;
+   height: 400px;
+}
+
+/* CARD ATRAS ENLACE */
+.img__a{
+    width: 160px;
+    height: 45px;
+    padding: 10px 0;
+}
+
+
+}
+
+
+
+
+@media screen and (max-width: 460px){
+
+    /* parte 1 Card */
+   
+.derecha__parte1-card{
+   width: 300px;
+   height: 400px;
+}
+
+
+.contenedor__grid{
+width: 100%;
+display: grid;
+max-width: 1238px;
+grid-template-columns: 100px auto;
+background-color: black;
+}
+
+
+/* ! izquierda txt */
+.text-cont__h3{
+    font-size: 21px;
+}
+}
+
+
+
+
+
+@media screen and (max-width: 435px){
+
+    /* parte 1 Card */
+   
+.derecha__parte1-card{
+   width: 280px;
+   height: 380px;
+}
+
+.contenedor__grid{
+width: 100%;
+display: grid;
+max-width: 1238px;
+grid-template-columns: 90px auto;
+background-color: black;
+}
+
+
+
+/* ! DERECHA */
+.grid__derecha{
+    row-gap: 0px;
+}
+
+/* ! izquierda txt */
+.text-cont__h3{
+    font-size: 20px;
+}
+
+}
+
+
+
+@media screen and (max-width: 417px){
+
+    /* parte 1 Card */
+   
+.derecha__parte1-card{
+   width: 260px;
+   height: 380px;
+}
+
+.contenedor__grid{
+width: 100%;
+display: grid;
+max-width: 1238px;
+grid-template-columns: 100px auto;
+background-color: black;
+}
+
+
+
+/* !card text */
+.img__text-h4{  
+    font-size: 30px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    padding: 0 200px;
+}
+
+}
+
+
+
+
+@media screen and (max-width: 400px){
+
+    /* parte 1 Card */
+   
+.derecha__parte1-card{
+   width: 240px;
+   height: 380px;
+}
+
+.contenedor__grid{
+width: 100%;
+display: grid;
+max-width: 1238px;
+grid-template-columns: 80px auto;
+background-color: black;
+}
+
+
+
+/* !card text */
+.img__text-h4{  
+    font-size: 30px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    padding: 0 200px;
+}
+
+}
+
+
+
+@media screen and (max-width: 340px){
+
+/* parte 1 Card */
+   
+.derecha__parte1-card{
+   width: 230px;
+   height: 380px;
+}
+
+.contenedor__grid{
+width: 100%;
+display: grid;
+max-width: 1238px;
+grid-template-columns: 70px auto;
+background-color: black;
+}
+
+
+
+/* !card text */
+.img__text-h4{  
+    font-size: 30px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    padding: 0 200px;
+}
+
+
+/* CARD ATRAS ENLACE */
+.img__a{
+    width: 130px;
+    height: 45px;
+    padding: 10px 0;
+}
+
+
+}
+
+
+
+
+@media screen and (max-width: 330px){
+
+    /* parte 1 Card */
+   
+.derecha__parte1-card{
+   width: 215px;
+   height: 350px;
+}
+
+.contenedor__grid{
+width: 100%;
+display: grid;
+max-width: 1238px;
+grid-template-columns: 70px auto;
+background-color: black;
+}
+
+
+
+/* !card text */
+.img__text-h4{  
+    font-size: 30px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    padding: 0 200px;
+}
+
+}
+
+
+
+
+@media screen and (max-width: 300px){
+
+    /* parte 1 Card */
+   
+.derecha__parte1-card{
+   width: 200px;
+   height: 350px;
+}
+
+.contenedor__grid{
+width: 100%;
+display: grid;
+max-width: 1238px;
+grid-template-columns: 50px auto;
+background-color: black;
+}
+
+
+
+/* !card text */
+.img__text-h4{  
+    font-size: 30px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    padding: 0 200px;
+}
+
+}
